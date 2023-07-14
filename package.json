@@ -7,7 +7,7 @@
   "license": "EUPL-1.2",
   "displayName": "aat-lookup",
   "description": "Performs a text query against the AAT data hosted on TriplyDB and returns the identifier.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -25,12 +25,12 @@
       }
     ],
     "configuration": [
-			{
-				"id": "aatLookupSettings",
-				"title": "Settings AAT Term Lookup",
-				"order": 2,
-				"properties": {
-					"conf.settingsEditor.aatLookupSettingsApi": {
+      {
+        "id": "aatLookupSettings",
+        "title": "Settings AAT Term Lookup",
+        "order": 2,
+        "properties": {
+          "conf.settingsEditor.aatLookupSettingsApi": {
             "type": "string",
             "order": 2,
             "properties": {
@@ -41,28 +41,28 @@
             },
             "default": "https://triplydb.com/_api/datasets/getty/aat/services/aat-text-search/elasticsearch"
           },
-					"conf.settingsEditor.aatLookupSettingsOutput": {
-						"type": "object",
-						"order": 1,
-						"properties": {
-							"usePrefixer": {
-								"type": "boolean",
-								"description": "Use TriplyETL vocab syntax"
-							},
-							"addTermLabel": {
-								"type": "boolean",
-								"description": "Add the found label as comment"
-							}
-						},
-						"additionalProperties": false,
-						"default": {
-							"usePrefixer": true,
-							"addTermLabel": true
-						}
-					}
+          "conf.settingsEditor.aatLookupSettingsOutput": {
+            "type": "object",
+            "order": 1,
+            "properties": {
+              "usePrefixer": {
+                "type": "boolean",
+                "description": "Use TriplyETL vocab syntax"
+              },
+              "addTermLabel": {
+                "type": "boolean",
+                "description": "Add the found label as comment"
+              }
+            },
+            "additionalProperties": false,
+            "default": {
+              "usePrefixer": true,
+              "addTermLabel": true
+            }
+          }
         }
-			}
-		]
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
