@@ -66,7 +66,14 @@ export function activate(context: vscode.ExtensionContext) {
 						snippet += ` // ${selection[0].label}`;
 					}
 
-					vscode.window.showInformationMessage(snippet);
+					const editor = vscode.window.activeTextEditor;
+					
+					if (editor) {
+						editor.edit(builder => builder.insert(editor.selection.active, snippet))
+					} else {
+						vscode.window.showInformationMessage(snippet);
+					}
+
 				}).catch(e => {
 					vscode.window.showErrorMessage((e as Error).message);
 				});
