@@ -57,7 +57,7 @@ export function activate(context: vscode.ExtensionContext) {
 					}
 					let snippet = ''
 					if (settings?.usePrefixer ?? true) {
-						snippet = `prefixer.aat('${results.hits.hits[0]._id.replace(/.+\/(\d+)$/, '$1')}') `;
+						snippet = `prefixer.aat('${results.hits.hits[0]._id.replace(/.+\/(\d+)$/, '$1')}')`;
 					} else {
 						snippet = results.hits.hits[0]._id;
 					}
