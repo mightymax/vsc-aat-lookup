@@ -1,5 +1,6 @@
 {
   "name": "aat-lookup",
+  "icon": "static/getty_logo_og.png",
   "author": {
     "name": "Mark Lindeman",
     "email": "mark.lindeman@triply.cc"
@@ -11,7 +12,10 @@
   "engines": {
     "vscode": "^1.80.0"
   },
-  "repository": "github:mightymax/vsc-aat-lookup.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mightymax/vsc-aat-lookup"
+  },
   "categories": [
     "Other"
   ],
