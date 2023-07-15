@@ -6,12 +6,13 @@
     "email": "mark.lindeman@triply.cc"
   },
   "license": "EUPL-1.2",
-  "displayName": "aat-lookup",
+  "displayName": "Art & Architecture Thesaurus (AAT) Lookup",
   "description": "Performs a text query against the AAT data hosted on TriplyDB and returns the identifier.",
   "version": "0.0.4",
   "engines": {
     "vscode": "^1.80.0"
   },
+  "publisher": "MarkLindeman",
   "repository": {
     "type": "git",
     "url": "https://github.com/mightymax/vsc-aat-lookup"
